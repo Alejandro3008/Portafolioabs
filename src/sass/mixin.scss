@@ -1,0 +1,6 @@
+@mixin containerTemplate ($margin){
+    height: calc(100vh - 128px);
+    margin-top: $margin;
+    font-family: 'Amatic SC', cursive;
+    letter-spacing: 0.05em;
+}

@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import 'mixin';
+
+.borderPrueba{border: solid 1px black;}
+.bg-1{background-color: #66f070;}
+.bg-2{background-color: beige}
+.bg-3{background-color: brown}
+
+#titleHome{
+animation-name: movement;
+animation-duration: 2s;
+animation-iteration-count: 1;
+animation-fill-mode: backwards;
+}
+
+.home_container{
+    .flexcontainer{
+        width: 100%
+    }
+    @include containerTemplate(96px);
+    font-size: 8vw;
+    p{
+        margin: 0;
+    }
+    article:nth-child(1){
+        p{
+            margin-left: 5%;
+        }
+    }
+    article:nth-child(2){
+        p{
+            margin-left: 35%;
+        }
+    }
+    article:nth-child(3){
+        p{
+            margin-left: 10%;
+        }
+        span{
+            color: #5BCCF6;
+        }
+        p::after{
+            display: inline-block;
+            width: 300px !important;
+            text-align: center;
+            font-size: 5vh;
+            content: "Software Engineer based in Mexico.";
+            text-transform: uppercase;
+        }
+    }
+}
+
+.font_Yellow{
+    color: #FCDE67;
+}
+.font_BlueD{
+    color: #030E12;
+}
+.font_Brown{
+    color: #EF9273;
+}
+.font_Blue{
+    color: #5BCCF6;
+}
+.font_Green{
+    color: #66f070;
+}
+
+@media (max-width: 799px){
+    .home_container{
+        font-size: 10vw;
+        line-height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .flexcontainer{
+            article:nth-child(1){
+                p{
+                    margin-left: 15%;
+                }
+            }
+            article:nth-child(2){
+                p{
+                    margin-left: 35%;
+                }
+            }
+            article:nth-child(3){
+                p::after{
+                    line-height: normal;
+                    display: inline-block;
+                    width: 150px !important;
+                    text-align: center;
+                    font-size: 1.5vh;
+                    content: "Software Engineer based in Mexico.";
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 575.98px){
+    *{
+        overflow-x: hidden !important;
+    }
+    .home_container{
+        padding: 0;
+        font-size: 6vw;
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 64px;
+        font-size: 10vw;
+        .flexcontainer{
+            article:nth-child(1){
+                p{
+                    margin-left: 15%;
+                }
+            }
+            article:nth-child(2){
+                p{
+                    margin-left: 35%;
+                }
+            }
+            article:nth-child(3){
+                p::after{
+                    line-height: normal;
+                    display: inline-block;
+                    width: 120px !important;
+                    text-align: center;
+                    font-size: 2vh;
+                    content: "Software Engineer based in Mexico.";
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+@keyframes movement {
+    0%{
+        margin-left: -100%;
+        font-size: 0;
+    }
+    100%{margin-left:0%}
+}

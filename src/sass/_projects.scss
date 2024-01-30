@@ -1,0 +1,65 @@
+@import 'mixin';
+
+.projectsContainer{
+    @include containerTemplate(40px);
+}
+
+.item_project{
+    width: 100%;
+    height: 6rem;
+    border-bottom: solid #303136 1px;
+    .projectName{
+        all: unset;
+        text-align: left;
+        font-size: 4.7rem;
+        font-weight: bold;
+        margin: 0;
+    }
+    img{
+        position: absolute;
+        width: 30rem;
+        height: 12rem;
+        left: 32rem;
+        top: 83rem;
+    }
+    .hidden{
+        display: block;
+        opacity: 0;
+    }
+    .projectName:hover{
+        cursor: pointer !important;
+    }
+    .projectName:hover + .hidden{
+        display: block;
+        opacity: 1;
+        transition: opacity .80s ease-out;
+    }
+}
+
+@media (max-width: 575.98px){
+    .item_project{
+        width: 100%;
+        height: 2.5rem;
+        border-bottom: solid #303136 1px;
+        .projectName{
+            text-align: left;
+            font-size: 1.7rem;
+            font-weight: bold;
+            margin: 0;
+        }
+    }
+}
+
+@media (max-width: 799px){
+    .item_project{
+        width: 100%;
+        height: 4rem;
+        border-bottom: solid #303136 1px;
+        .projectName{
+            text-align: left;
+            font-size: 2.7rem;
+            font-weight: bold;
+            margin: 0;
+        }
+    }
+}

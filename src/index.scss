@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Viaoda+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700;400&display=swap');
+@import url('./css/bootstrap-grid.min.css');
+@import url('./sass/_menu.scss');
+@import url('./sass/_home.scss');
+@import url('./sass/_footer.scss');
+@import url('./sass/_footer.scss');
+@import url('./sass/_aboutMe.scss');
+@import url('./sass/_projects.scss');
+@import url('./sass/_contact.scss');
+@import url('./sass/_rickandmorty.scss');
+//font-family: 'Abril Fatface', cursive;
+
+//font-family: 'Viaoda Libre', cursive;
+body{
+    margin: 0;
+    overflow-x: hidden !important;
+}
+body::-webkit-scrollbar {display: none;}
+.dark{
+    background-color: #303136 !important;
+    color: #f4f4f5 !important;
+    .bars{
+        background-color: #f4f4f5;
+    }
+    .slider {
+        border: 0.5px solid  #f4f4f5;
+    }
+    .borderSection{
+        border-top: .5px solid #f4f4f5;
+    }
+    .item_project{
+        border-color: #f4f4f5;
+    }
+    .link{
+        color: #f4f4f5;
+    }
+}
+
+.titleSection{
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.prueba{
+    background-color: aqua;
+}
+
+.NoMargin{
+    margin: 0px !important;
+}
+
+.hidden{
+    display: none;
+}
+
+.borderSection{
+    border-top: .5px solid #303136;
+}
+
+@media (max-width: 595.78px){
+    .borderSection{
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
